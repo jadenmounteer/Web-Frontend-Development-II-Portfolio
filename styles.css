@@ -1,0 +1,342 @@
+/* Color Pallets */
+/*
+  Background/Green/Yellow: https://coolors.co/202020-3fcb9f-1e5648-1f3d34-1f2c2a-f1fe9b-575a40-3c3d30-2d2d27
+  eerie green: #202020
+
+  Yellow 
+  Key Lime: #F1FE9B
+  Yellow Glow: #575A40
+  Yellow border glow: #2D2D27
+
+  Blue #8ef7ff
+  glow: #1306ce
+  border glow: #333333
+
+  Purple
+  Maximum blue purple: #AA9FFF
+  Purple Glow: #C9C2FF
+  Purple border glow: ##28272d
+
+  Pink 
+  Cyclamen: #F76B9F
+  Pink Glow: #F98BB3
+
+  Green
+  Caribean green: #3FCB9F
+  Green glow: #238063
+  green glow for borders: #1F2C2A
+
+  Orange
+  Sunray: #ECB164
+  Orange glow: #EFBF80
+*/
+
+/* Import fonts */
+/* Rock salt */ 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+/* font-family: 'Rock Salt', cursive; */
+/* Pattaya */
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+/* font-family: 'Pattaya', sans-serif; */
+/* Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* font-family: 'Lato', sans-serif; */
+
+
+/* GENERAL STYLES (NO MEDIA QUERIES) */
+
+html {
+    /* Change the baground color */
+    background-color: #202020;
+}
+
+/* Style the header */
+header {
+    /* Put a border around the header */
+    border-top: 3px solid #3FCB9F;
+    border-bottom: 3px solid #3FCB9F;
+    /* Give the border a shadow */
+    box-shadow: 5px 10px #1F2C2A;
+}
+
+/* Style the logo */ 
+.logo {
+    color: #AA9FFF;
+    /* Give the logo a shadow */
+    text-shadow: 0px 0px 20px #C9C2FF;
+    font-family: 'Pattaya', sans-serif;
+}
+
+/* Style the industry title */
+.industry-description-header {
+    color: #F76B9F;
+    /* Give the header a glow */
+    text-shadow: 0px 0px 20px #F98BB3;
+    font-family: 'Rock Salt', cursive;
+}
+
+/* Style all of the paragraphs */
+p {
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+/* Style the industry description section */
+.industry-description-section {
+    /* Put some margin from from the top section */
+    margin-top: 1em;
+    /* Put a border around the section */
+    border-top: 3px solid #F1FE9B;
+    border-bottom: 3px solid #F1FE9B;
+    /* Give the border a shadow */
+    box-shadow: 5px 10px #2D2D27;
+} 
+
+/* Style the Why do I do it header */
+.why-do-i-do-it-header {
+    color: #ECB164;
+    font-family: 'Rock Salt', cursive;
+    /* Give the header a glow */
+    text-shadow: 0px 0px 20px #EFBF80;
+}
+
+/* Style the related skills section */
+.related-skills-section {
+    /* Put some margin from from the top section */
+    margin-top: 1em;
+    /* Put a border around the section */
+    border-top: 3px solid #8ef7ff;
+    border-bottom: 3px solid #8ef7ff;
+    /* Give the border a shadow */
+    box-shadow: 5px 10px #333333;
+}
+
+/* Style the related skills header */
+.related-skills-header {
+    color: #AA9FFF;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 0px 0px 20px #C9C2FF;
+}
+
+/* Style the paragraphs in the related skills section */
+.logo-title {
+    /* Center them below the logos */
+    text-align: center;
+}
+
+/* Style the C# div, since the image is a bit different */
+#c-sharp-logo-div {
+    margin-top: -1.4%;
+} 
+
+/* Style the projects section */
+.completed-projects-section {
+    /* Put some margin from the top section */
+    margin-top: 1em;
+    /* Put a border around the section */
+    border-top: 3px solid #F76B9F;
+    border-bottom: 3px solid #F76B9F;
+    /* Give the border a shadow */
+    box-shadow: 5px 10px #333333;
+    /* Give the section some padding at the bottom */
+    padding-bottom: 1%;
+}
+
+/* Style the project section header */
+.projects-header {
+    color: #3FCB9F;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 0px 0px 20px #238063;
+
+}
+
+/* Style the project headers */
+.project-header {
+    color: #8ef7ff;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 0px 0px 20px #1306ce;
+}
+
+/* Style the footer */
+footer {
+    /* Put some margin from the top section */
+    margin-top: 1em;
+    /* Put a border around the section */
+    border-top: 3px solid #ECB164;
+}
+
+/* Style the like what you see header */
+#like-what-you-see-header {
+    color: #F1FE9B;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 0px 0px 20px #575A40;
+}
+
+/* Style the nav links in the footer */
+nav {
+    /* Make some room from the top element */
+    margin-top: 2%;
+
+}
+nav ul {
+    /* Remove the bullets */
+    list-style: none;
+    /* Move all of the links left a bit */
+    margin-left: -1.6%;
+  }
+
+.nav-link {
+/* Change the color of the links */
+color: white;
+/* Romove the underlines */
+text-decoration: none;
+/* Change the font size */
+font-size: 1.1em;
+}
+
+/* Style the footer at the bottom of the page */
+#DeveloperDaddy-footer-title {
+    /* Center it */
+    text-align: center;
+    /* Make some room from the top element */
+    margin-top: 3%;
+}
+
+/* Style the images on the page */
+img {
+    /* Make the images responsive */
+    max-width: 100%; /* max-width makes the image scale down, if it has to, but never scale more than its original size defined in html */
+    height: auto;
+}
+
+/* Style the flex containers */
+#skills-flex-container {
+    /* Change the container to the flex type */
+    display: flex;
+    /* Make the child elements wrap around at a certain point */
+    flex-wrap: wrap;
+    /* Give the elements some space */
+    justify-content: space-around;
+}
+
+
+
+/***** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    /* Change the background color for testing purposes */
+    /* 
+    html {
+        background-color: green;
+    }
+    */
+
+    /* Style the skills flex container */
+    #skills-flex-container {
+        /* Make each of the skills stack in a single column */
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    /* Style the skill logo divs */
+    .logo-div {
+        /* Center the logo divs */
+        margin-left: auto;
+        margin-right: auto;
+        /* Put some space from the top element */
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+  
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+    /* Change the background color for testing purposes */
+    /* 
+    html {
+        background-color: yellow;
+    }
+    */
+
+    /* Style the skill logo divs */
+    .logo-div {
+        /* Put some more space between the elements */
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* Change the background color for testing purposes */
+    /* 
+    html {
+        background-color: red;
+    }
+    */
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* Change the background color for testing purposes */
+    /* 
+    html {
+        background-color: blue;
+    }
+    */
+
+    /* Style the project divs */
+    .project-div {
+        /* Create a grid with 2 equal columns */
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    /* Style the project headers */
+    .project-header {
+        /* Move it up a bit, this will also move the paragraph and the button below it. */
+        margin-top: -1%;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* Change the background color for testing purposes */
+    /* 
+    html {
+        background-color: tan;
+    }
+    */
+
+    /* Style the project gif divs */
+    .project-gif-div {
+        /* Move them to the right a bit */
+        margin-left: 20%;
+
+    }
+
+    /* Style the project description divs */
+    .project-description-div {
+        margin-right: 5%;
+    }
+
+}
+
+  
+
+
+
+
+
