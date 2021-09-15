@@ -68,7 +68,7 @@ header {
 }
 
 /* Style the industry title */
-.industry-description-header {
+.table-of-contents-header {
     color: #F76B9F;
     /* Give the header a glow */
     text-shadow: 0px 0px 20px #F98BB3;
@@ -81,8 +81,29 @@ p {
     color: white;
 }
 
+/* Style the table of contents*/
+li {
+    color: white;
+    font-size: 1.1em;
+}
+
+#table-of-contents-list-of-links a{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    text-decoration: none;
+    
+}
+
+/* Style the links when you hover over them */
+#table-of-contents-list-of-links a:hover {
+    color: #F76B9F;
+    cursor: grab;
+}
+
+
+
 /* Style the industry description section */
-.industry-description-section {
+.table-of-contents-section {
     /* Put some margin from from the top section */
     margin-top: 1em;
     /* Put a border around the section */
@@ -170,28 +191,6 @@ footer {
     color: #F1FE9B;
     font-family: 'Rock Salt', cursive;
     text-shadow: 0px 0px 20px #575A40;
-}
-
-/* Style the nav links in the footer */
-nav {
-    /* Make some room from the top element */
-    margin-top: 2%;
-
-}
-nav ul {
-    /* Remove the bullets */
-    list-style: none;
-    /* Move all of the links left a bit */
-    margin-left: -1.6%;
-  }
-
-.nav-link {
-/* Change the color of the links */
-color: white;
-/* Romove the underlines */
-text-decoration: none;
-/* Change the font size */
-font-size: 1.1em;
 }
 
 /* Style the footer at the bottom of the page */
