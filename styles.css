@@ -132,7 +132,7 @@ li {
 }
 
 /* Style the related skills section */
-.related-skills-section {
+.questions-and-answers-section {
     /* Put some margin from from the top section */
     margin-top: 5em;
     /* Put a border around the section */
@@ -143,10 +143,29 @@ li {
 }
 
 /* Style the related skills header */
-.related-skills-header {
+.questions-and-answers-header {
     color: #AA9FFF;
     font-family: 'Rock Salt', cursive;
     text-shadow: 0px 0px 20px #C9C2FF;
+}
+
+/* Style the questions and answers table */
+.questions-and-answers-table {
+    margin-bottom: 40px;
+    width: 20%;
+
+}
+
+.questions-and-answers-table-header-row {
+    background-color: #F1FE9B;
+    
+    font-family: 'Pattaya', sans-serif;
+}
+
+.questions-and-answers-table-rows {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+
 }
 
 /* Style the paragraphs in the related skills section */

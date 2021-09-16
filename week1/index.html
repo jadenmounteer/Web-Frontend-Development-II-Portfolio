@@ -20,51 +20,58 @@
                     <span id="message-span">Welcome to my week 1 stuff! This is where I learned all about making a great portfolio</span>
                 </div>
                 <!-- Call the JavaScript to display the different messages-->
-                <script src="../js/developerDaddyController.js" defer></script>
+                <script src="../js/developerDaddyController.js" defer>
+
+
+                
+                
+                </script>
+
+                <script>
+                    /* Set an interval that changes the message displayed every few seconds */
+                    setInterval(function(){
+                        console.log("Calling the interval function");
+                        // Call the AJAX function
+                        getNewMessage("../messages.txt");
+    
+                    }, 10000);
+
+                </script>
             </header>
 
             <main>
-
-                <!-- Table of contents section -->
-                <section class="table-of-contents-section" id="table-of-contents-section">
-                    <h2 class="table-of-contents-header"> Table of Contents</h2>
-                    
-                    <!-- The list of links -->
-                    <!-- To add links to the list, add them to the tableOfContentsLinks array in the main.js file-->
-                    <ol id="table-of-contents-list-of-links"></ol>
-
-
-
-                </section>
 
                 <!-- Notes/exercises Section -->
                 <section class="notes-and-exercises-section" id="notes-and-exercises-section">
                     <h2 class="notes-and-exercises-header" id="notes-and-exercises-header">Notes and Exercises</h2>
                     <p>My notes can be found here:</p> 
-                    <a class="link-to-notes" href="week1/notes-and-exercises/W01 Creating a Portfolio.docx">Week 1 notes - Creating a Portfolio</a>
+                    <a class="link-to-notes" href="https://github.com/jadenmounteer/Web-Frontend-Development-II-Portfolio/tree/main/week1/notes-and-exercises">Week 1 notes - Creating a Portfolio</a>
                     <p> I worked through an example showing how to use LocalStorage with JavaScript. The links can be found here:</p>
                     <a class="link-to-notes" href="https://glitch.com/edit/#!/jadens-epic-story-editor">Epic Story Editor Source Code</a> <br>
                     <a class="link-to-notes" href="https://jadens-epic-story-editor.glitch.me/">Epic Story Editor Example</a>
                     
-                </section>               
+                </section>
+                
+                <!-- Questions and answers section -->
+                <section class= "questions-and-answers-section">
+                    <h2 class="questions-and-answers-header">Questions and Answers</h2>
+                    <!-- Questions and answers table -->
+                    <table class="questions-and-answers-table">
+                        <tr class="questions-and-answers-table-header-row">
+                            <th>Question</th>
+                            <th>Answer</th>
+                        </tr>
+                        <tr class="questions-and-answers-table-rows">
+                            <td>When is local storage discarded?</td>
+                            <td>Local storage is discarded when the user clears their cache.</td>
+                        </tr>
+                    </table>
+
+
+
+                </section>
             </main>
         </div>
 
-            <!-- Footer at the bottom of the page -->
-            <footer>
-                <div id="footer-box">
-                    <!--Like what you see section -->
-                    <section id="like-what-you-see-section">
-                        <h2 id="like-what-you-see-header">Like what you see?</h2>
-                        <button id="send-me-an-email-button">Send Me an Email</button>
-                    </section>
-                </div>
-                
-                
-                <!--Social Media Link-->
-                <!--Logo-->
-                <h1 id="DeveloperDaddy-footer-title" class="logo">DeveloperDaddy</h1>
-                
-            </footer>
     </body>
 </html>

@@ -1,11 +1,3 @@
-/* Set an interval that changes the message displayed every few seconds */
-setInterval(function(){
-    console.log("Calling the interval function");
-    // Call the AJAX function
-    getNewMessage("../messages.txt");
-    
-}, 10000);
-
 
 /* Fetch the new message from the file using AJAX */
 function getNewMessage(textFile) {

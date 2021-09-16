@@ -18,8 +18,19 @@
                     <a href="index.html"><img src="assets/DeveloperDaddy.gif" alt="an image of me" width="200"></a>
                     <span id="message-span">Hello! Welcome to my portfolio!</span>
                 </div>
-                <!-- Call the JavaScript to display the different messages-->
-                <script src="js/developerDaddyController.js" defer></script>
+                 <!-- Call the JavaScript to display the different messages-->
+                 <script src="../js/developerDaddyController.js" defer></script>
+        
+                    <script>
+                        /* Set an interval that changes the message displayed every few seconds */
+                        setInterval(function(){
+                            console.log("Calling the interval function");
+                            // Call the AJAX function
+                            getNewMessage("messages.txt");
+        
+                        }, 10000);
+
+                    </script>
                 
             </header>
 
@@ -39,22 +50,5 @@
       
             </main>
         </div>
-
-            <!-- Footer at the bottom of the page -->
-            <footer>
-                <div id="footer-box">
-                    <!--Like what you see section -->
-                    <section id="like-what-you-see-section">
-                        <h2 id="like-what-you-see-header">Like what you see?</h2>
-                        <button id="send-me-an-email-button">Send Me an Email</button>
-                    </section>
-                </div>
-                
-                
-                <!--Social Media Link-->
-                <!--Logo-->
-                <h1 id="DeveloperDaddy-footer-title" class="logo">DeveloperDaddy</h1>
-                
-            </footer>
     </body>
 </html>
