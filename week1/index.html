@@ -19,18 +19,34 @@
                     <a href="../index.html"><img src="../assets/DeveloperDaddy.gif" alt="an image of me" width="200"></a>
                     <span id="message-span">Welcome to my week 1 stuff! This is where I learned all about making a great portfolio</span>
                 </div>
-                <!-- Call the JavaScript to display the different messages-->
-                <script src="../js/developerDaddyController.js" defer>
 
-
-                
-                
                 </script>
 
                 <script>
+                    /* Fetch the new message from the file using AJAX */
+                    function getNewMessage(textFile) {
+                        const xhttp = new XMLHttpRequest();
+
+                        xhttp.onload = function() {
+                            // Split the contents of the text file into an array
+                            let responseArray = this.responseText.split("\n");
+
+                            // Find a random number based on the array's length
+                            var randomNumber = Math.floor(Math.random() * responseArray.length);
+
+                            // Display the message based on the random number
+                            let messageToDisplay = responseArray[randomNumber];
+
+                            // Display the message to the screen
+                            document.getElementById("message-span").innerHTML = messageToDisplay
+                        };
+
+                        xhttp.open("GET", textFile);
+                        xhttp.send();
+
+                    }
                     /* Set an interval that changes the message displayed every few seconds */
                     setInterval(function(){
-                        console.log("Calling the interval function");
                         // Call the AJAX function
                         getNewMessage("../messages.txt");
     
