@@ -1,3 +1,7 @@
+/*
+Link to github page: https://jadenmounteer.github.io/Web-Frontend-Development-II-Portfolio/
+*/
+
 /* Global elements */
 
 // Array of links to display in the table of contents
