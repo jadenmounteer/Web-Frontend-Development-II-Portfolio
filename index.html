@@ -20,8 +20,11 @@
                 </div>
         
                     <script>
-                        /* Fetch the new message from the file using AJAX */
-                        function getNewMessage(textFile) {
+                        
+                        /* Set an interval that changes the message displayed every few seconds */
+                        setInterval(function(){
+                            console.log("Calling the interval function");
+                            // Call the AJAX function
                             const xhttp = new XMLHttpRequest();
 
                             xhttp.onload = function() {
@@ -38,15 +41,8 @@
                                 document.getElementById("message-span").innerHTML = messageToDisplay
                             };
 
-                            xhttp.open("GET", textFile);
+                            xhttp.open("GET", 'messages.txt');
                             xhttp.send();
-
-                            }
-                        /* Set an interval that changes the message displayed every few seconds */
-                        setInterval(function(){
-                            console.log("Calling the interval function");
-                            // Call the AJAX function
-                            getNewMessage("messages.txt");
         
                         }, 10000);
 
