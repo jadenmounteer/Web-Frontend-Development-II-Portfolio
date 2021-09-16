@@ -94,6 +94,16 @@ li {
     
 }
 
+.link-to-notes {
+    font-family: 'Lato', sans-serif;
+    color: #8ef7ff;
+    text-decoration: none;
+}
+
+.link-to-notes:hover {
+    color: #1306ce;
+}
+
 /* Style the links when you hover over them */
 #table-of-contents-list-of-links a:hover {
     color: #F76B9F;
@@ -105,7 +115,7 @@ li {
 /* Style the industry description section */
 .table-of-contents-section {
     /* Put some margin from from the top section */
-    margin-top: 1em;
+    margin-top: 5em;
     /* Put a border around the section */
     border-top: 3px solid #F1FE9B;
     border-bottom: 3px solid #F1FE9B;
@@ -124,7 +134,7 @@ li {
 /* Style the related skills section */
 .related-skills-section {
     /* Put some margin from from the top section */
-    margin-top: 1em;
+    margin-top: 5em;
     /* Put a border around the section */
     border-top: 3px solid #8ef7ff;
     border-bottom: 3px solid #8ef7ff;
@@ -151,9 +161,9 @@ li {
 } 
 
 /* Style the projects section */
-.completed-projects-section {
+.notes-and-exercises-section {
     /* Put some margin from the top section */
-    margin-top: 1em;
+    margin-top: 5em;
     /* Put a border around the section */
     border-top: 3px solid #F76B9F;
     border-bottom: 3px solid #F76B9F;
@@ -164,7 +174,7 @@ li {
 }
 
 /* Style the project section header */
-.projects-header {
+.notes-and-exercises-header {
     color: #3FCB9F;
     font-family: 'Rock Salt', cursive;
     text-shadow: 0px 0px 20px #238063;
@@ -172,7 +182,7 @@ li {
 }
 
 /* Style the project headers */
-.project-header {
+.notes-and-exercises-header {
     color: #8ef7ff;
     font-family: 'Rock Salt', cursive;
     text-shadow: 0px 0px 20px #1306ce;
@@ -181,7 +191,7 @@ li {
 /* Style the footer */
 footer {
     /* Put some margin from the top section */
-    margin-top: 1em;
+    margin-top: 5em;
     /* Put a border around the section */
     border-top: 3px solid #ECB164;
 }
@@ -218,6 +228,21 @@ img {
     justify-content: space-around;
 }
 
+/* Style the message span */
+#message-span {
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    padding: 1em;
+    border-radius: 25px;
+    max-width: 200px;
+    max-height: 100px;
+    
+}
+
+#developer-daddy-div {
+    display: grid;
+    grid-template-columns: 8% 50%;
+}
 
 
 /***** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
