@@ -110,6 +110,11 @@ li {
     cursor: grab;
 }
 
+.link-to-notes:hover {
+    color: #F76B9F;
+    cursor: grab;
+}
+
 
 
 /* Style the industry description section */
@@ -263,6 +268,11 @@ img {
     grid-template-columns: 8% 50%;
 }
 
+.code-snippet {
+    background-color: white;
+    width: 600px;
+}
+
 
 /***** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
 
@@ -373,6 +383,10 @@ img {
     /* Style the project description divs */
     .project-description-div {
         margin-right: 5%;
+    }
+
+    .code-snippet {
+        width: 600px;
     }
 
 }
