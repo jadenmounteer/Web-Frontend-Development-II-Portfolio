@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to the CSS Stylesheet -->
+        <link rel="stylesheet" href="../styles.css" />
+        <!-- Link to the JavaScript file-->
+        <script src="../js/main.js" defer></script>
+        <title>Portfolio | Week 3</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <!-- Name of site on the header -->
+                <h1 id="DeveloperDaddy-Title" class="logo">Week 3</h1>
+
+                <div id="developer-daddy-div">
+                    <a href="../index.html"><img src="../assets/DeveloperDaddy.gif" alt="an image of me" width="200"></a>
+                    <span id="message-span">Welcome to my week 3 stuff! This is where I learned more about JavaScript objects, regular expressions, and the DOM.</span>
+                </div>
+
+                </script>
+
+                <script>
+                    /* Fetch the new message from the file using AJAX */
+                    function getNewMessage(textFile) {
+                        const xhttp = new XMLHttpRequest();
+
+                        xhttp.onload = function() {
+                            // Split the contents of the text file into an array
+                            let responseArray = this.responseText.split("\n");
+
+                            // Find a random number based on the array's length
+                            var randomNumber = Math.floor(Math.random() * responseArray.length);
+
+                            // Display the message based on the random number
+                            let messageToDisplay = responseArray[randomNumber];
+
+                            // Display the message to the screen
+                            document.getElementById("message-span").innerHTML = messageToDisplay
+                        };
+
+                        xhttp.open("GET", textFile);
+                        xhttp.send();
+
+                    }
+                    /* Set an interval that changes the message displayed every few seconds */
+                    setInterval(function(){
+                        // Call the AJAX function
+                        getNewMessage("../messages.txt");
+    
+                    }, 10000);
+
+                </script>
+            </header>
+
+            <main>
+
+                <!-- Notes/exercises Section -->
+                <section class="notes-and-exercises-section" id="notes-and-exercises-section">
+                    <h2 class="notes-and-exercises-header" id="notes-and-exercises-header">Notes and Exercises</h2>
+                    <p>My notes can be found here:</p> 
+                    <a class="link-to-notes" href="https://github.com/jadenmounteer/Web-Frontend-Development-II-Portfolio/tree/main/week2/notes-and-exercises">Week 3 notes</a>
+                    
+                </section>
+
+                
+                <!-- Questions and answers section -->
+                <section class= "questions-and-answers-section">
+                    <h2 class="questions-and-answers-header">Questions and Answers</h2>
+                    <!-- Questions and answers table -->
+                    <table class="questions-and-answers-table">
+                        <tr class="questions-and-answers-table-header-row">
+                            <th>Question</th>
+                            <th>Answer</th>
+                        </tr>
+                        <tr class="questions-and-answers-table-rows">
+                            <td>What is the difference between == and ===?</td>
+                            <td></td>
+                        </tr>
+                        <tr class="questions-and-answers-table-rows">
+                            <td>How do you store JSON data in LocalStorage?</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Show and tell section -->
+                <section class="table-of-contents-section">
+                    <h2 class="table-of-contents-header">Show and Tell</h2>
+                    <p>For practice, I made a useful tool for me to use at work. I test a lot of software and I have to type a lot. <br>
+                        I made a handy website that allows me to copy dummy data and paste it into the software I test. This saves me about 30 seconds for every process I test. <br>
+                        Here is the website in action: (Yes, it's Harry Potter themed!)
+                    </p>
+                    <div>
+                        <img src="/assets/dummy-date-gif.gif" alt="a gif showing off my dummy data website" width="900">
+                    </div>
+                    <p>
+                        Wondering how I made the buttons copy the text to the clipboard? Well, that's easy with functions!<br>
+                        I simply gave the buttons an onclick method and wrote a function taking the id of the element I want to copy <br>
+                        as well as the button's id as parameters. Here is the function I wrote:
+                    </p>
+                    <pre class="code-snippet">
+                        <code>
+/* 
+Copies the text according to the row in the table.
+Changes the color of all the buttons to the default color.
+Changes the color of the button that was clicked to the new color. 
+*/
+function copyText(elementId, buttonId) {
+
+    /* COPY THE TEXT */
+
+    /* Grab the text to copy */
+    textToCopy = document.getElementById(elementId).innerHTML;
+    /* Create a text area element to house the text to copy */
+    const elem = document.createElement('textarea');
+    /* Give the new text area a value of the text to copy */
+    elem.value = textToCopy;
+    /* Select the text area */
+    elem.select();
+    /* Copy the text inside of the text field to the clipboard */
+    navigator.clipboard.writeText(elem.value);
+                        </code>
+                    </pre>
+                    <a class="link-to-notes" href="https://jadenmounteer.github.io/NBS-Dummy-Data/" target="blank">Here is a link to the site if you want to see it for yourself!</a>
+                </section>
+            </main>
+        </div>
+
+    </body>
+</html>
