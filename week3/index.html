@@ -17,7 +17,7 @@
 
                 <div id="developer-daddy-div">
                     <a href="../index.html"><img src="../assets/DeveloperDaddy.gif" alt="an image of me" width="200"></a>
-                    <span id="message-span">Welcome to my week 3 stuff! This is where I learned more about JavaScript objects, regular expressions, and the DOM.</span>
+                    <span id="message-span">Welcome to my week 3 stuff! This is where I learned more about JavaScript objects, regular expressions, array methods, and the DOM.</span>
                 </div>
 
                 </script>
@@ -77,7 +77,7 @@
                         </tr>
                         <tr class="questions-and-answers-table-rows">
                             <td>What is the difference between == and ===?</td>
-                            <td></td>
+                            <td>== compares variables, but ignores datatypes. === compares both variables and datatypes.</td>
                         </tr>
                         <tr class="questions-and-answers-table-rows">
                             <td>How do you store JSON data in LocalStorage?</td>
@@ -89,42 +89,76 @@
                 <!-- Show and tell section -->
                 <section class="table-of-contents-section">
                     <h2 class="table-of-contents-header">Show and Tell</h2>
-                    <p>For practice, I made a useful tool for me to use at work. I test a lot of software and I have to type a lot. <br>
-                        I made a handy website that allows me to copy dummy data and paste it into the software I test. This saves me about 30 seconds for every process I test. <br>
-                        Here is the website in action: (Yes, it's Harry Potter themed!)
+                    <p>For practice with making objects, I began making an artificial intelligence robot destined to help you find the perfect date. <br>
+                        So far I've been able to teach DateBot a few tricks by giving it properties and methods.<br>
+                        Check out how I can give DateBot a simple command in the gif below...
                     </p>
                     <div>
-                        <img src="/assets/dummy-date-gif.gif" alt="a gif showing off my dummy data website" width="900">
+                        <img src="/assets/programming-datebot-gif.gif" alt="a gif showing off how to program a robot" width="900">
                     </div>
                     <p>
-                        Wondering how I made the buttons copy the text to the clipboard? Well, that's easy with functions!<br>
-                        I simply gave the buttons an onclick method and wrote a function taking the id of the element I want to copy <br>
-                        as well as the button's id as parameters. Here is the function I wrote:
+                        Wondering how I did this? Check out my code below!<br>
+                        I created an object to represent DateBot. I gave it a property for the current gif being displayed on the screen. <br>
+                        I then created different methods to change the gif.
                     </p>
                     <pre class="code-snippet">
                         <code>
 /* 
-Copies the text according to the row in the table.
-Changes the color of all the buttons to the default color.
-Changes the color of the button that was clicked to the new color. 
+The DateBot object
 */
-function copyText(elementId, buttonId) {
+const dateBot = {
 
-    /* COPY THE TEXT */
+    /***  Properties ***/
 
-    /* Grab the text to copy */
-    textToCopy = document.getElementById(elementId).innerHTML;
-    /* Create a text area element to house the text to copy */
-    const elem = document.createElement('textarea');
-    /* Give the new text area a value of the text to copy */
-    elem.value = textToCopy;
-    /* Select the text area */
-    elem.select();
-    /* Copy the text inside of the text field to the clipboard */
-    navigator.clipboard.writeText(elem.value);
+    // The DateBot's current gif
+    dateBotImg: document.getElementById("datebot-gif"),
+    
+
+    /***  Methods ***/
+
+    /*
+    Changes the gif of dateBot to the talking gif
+    */
+    talk: function() {
+        this.dateBotImg.setAttribute("src", 
+        "assets/DateBot-talking.gif"); 
+    },
+
+    /*
+    Changes the gif of dateBot to the smiling gif
+    */
+    smile: function() {
+        this.dateBotImg.setAttribute("src", 
+        "assets/DateBot-blinking-straight-face.gif"); 
+    },
+
+    /*
+    Changes the gif of dateBot to the love it gif
+    */
+    loveIt: function() {
+        this.dateBotImg.setAttribute("src", 
+        "assets/DateBot-heart-animation.gif"); 
+    },
+
+    /*
+    Changes the gif of dateBot to the nailed it gif
+    */
+    nailedIt: function() {
+        this.dateBotImg.setAttribute("src", 
+        "assets/DateBot-nailed-it.gif"); 
+    },
+
+    /*
+    Changes the gif of dateBot to the confused it gif
+    */
+    confused: function() {
+        this.dateBotImg.setAttribute("src", 
+        "assets/DateBot-question-mark.gif"); 
+    },
+
+}
                         </code>
                     </pre>
-                    <a class="link-to-notes" href="https://jadenmounteer.github.io/NBS-Dummy-Data/" target="blank">Here is a link to the site if you want to see it for yourself!</a>
                 </section>
             </main>
         </div>
