@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to the CSS Stylesheet -->
+        <link rel="stylesheet" href="../styles.css" />
+        <!-- Link to the JavaScript file-->
+        <script src="../js/main.js" defer></script>
+        <title>Portfolio | Week 3</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <!-- Name of site on the header -->
+                <h1 id="DeveloperDaddy-Title" class="logo">Week 4</h1>
+
+                <div id="developer-daddy-div">
+                    <a href="../index.html"><img src="../assets/DeveloperDaddy.gif" alt="an image of me" width="200"></a>
+                    <span id="message-span">Welcome to my week 4 stuff! This is where I learned about Object Oriented Programming.</span>
+                </div>
+
+                </script>
+
+                <script>
+                    /* Fetch the new message from the file using AJAX */
+                    function getNewMessage(textFile) {
+                        const xhttp = new XMLHttpRequest();
+
+                        xhttp.onload = function() {
+                            // Split the contents of the text file into an array
+                            let responseArray = this.responseText.split("\n");
+
+                            // Find a random number based on the array's length
+                            var randomNumber = Math.floor(Math.random() * responseArray.length);
+
+                            // Display the message based on the random number
+                            let messageToDisplay = responseArray[randomNumber];
+
+                            // Display the message to the screen
+                            document.getElementById("message-span").innerHTML = messageToDisplay
+                        };
+
+                        xhttp.open("GET", textFile);
+                        xhttp.send();
+
+                    }
+                    /* Set an interval that changes the message displayed every few seconds */
+                    setInterval(function(){
+                        // Call the AJAX function
+                        getNewMessage("../messages.txt");
+    
+                    }, 10000);
+
+                </script>
+            </header>
+
+            <main>
+
+                <!-- Notes/exercises Section -->
+                <section class="notes-and-exercises-section" id="notes-and-exercises-section">
+                    <h2 class="notes-and-exercises-header" id="notes-and-exercises-header">Notes and Exercises</h2>
+                    <p>My notes can be found here:</p> 
+                    <a class="link-to-notes" href="https://github.com/jadenmounteer/Web-Frontend-Development-II-Portfolio/tree/main/week4/notes%20and%20exercises">Week 4 notes</a>
+                    
+                </section>
+
+                
+                <!-- Questions and answers section -->
+                <section class= "questions-and-answers-section">
+                    <h2 class="questions-and-answers-header">Questions and Answers</h2>
+                    <!-- Questions and answers table -->
+                    <table class="questions-and-answers-table">
+                        <tr class="questions-and-answers-table-header-row">
+                            <th>Question</th>
+                            <th>Answer</th>
+                        </tr>
+                        <tr class="questions-and-answers-table-rows">
+                            <td>When using modules, do all of your js files need to be modules?</td>
+                            <td></td>
+                        </tr>
+                        <tr class="questions-and-answers-table-rows">
+                            <td>Is PHP still widely used? Are there better alternatives?</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Show and tell section -->
+                <section class="table-of-contents-section">
+                    <h2 class="table-of-contents-header">Show and Tell</h2>
+                    <p>For more practice with making objects, I continued working on my DateBot project.<br>
+                        This time, I created a user object that represents the user. It allows the user to<br>
+                        press buttons and communicate with DateBot. Notice how, as I press buttons, DateBot<br>
+                        processes my input. Then, the user object processes DateBot's response and presents me<br>
+                        with more possible responses.
+                    </p>
+                    <div>
+                        <img src="../assets/datebot-user-object.gif" alt="a gif showing off how to program a robot" width="900">
+                    </div>
+                    <p>
+                        Wondering how I did this? Check out my code below!
+                    </p>
+                    <pre class="code-snippet">
+                        <code>
+/*
+    Respond to DateBot. 
+    Triggered when the user clicks a button.
+    */
+    respond: function(event) {
+        // Grab the user's response
+        const words = event.target.innerHTML;
+        // Hide the old buttons so the user cannot see them and click them again.
+        user.hideUserResponseButtons();
+        // Make dateBot respond
+        dateBot.processUserResponse(words);
+},
+/* 
+    Processes DateBot's response.
+    Takes the response object as a parameter.
+    Makes an AJAX request to user response file.
+    Loops through the data and determines the correct user response.
+    Creates new response buttons accordingly, after the DateBot animation
+    has stopped.
+    We don't want to be rude and interrupt DateBot.
+    */
+    processDateBotsResponse: function(DateBotsResponseObject) {
+        // Call the method for getting json data from the responses.json file.
+        user.getNewJsonMessage("./json/userResponses.json", DateBotsResponseObject); 
+    },
+    /*
+    The AJAX request for getting json data
+    */
+    getNewJsonMessage: function(jsonFile, dateBotResponse) {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onload = function() {
+        // Parse the response to turn it into a JavaScript object
+        let responses = JSON.parse(this.responseText);
+        // Call the respond method
+        user.getReadyToRespond(responses, dateBotResponse);
+        };
+
+        xhttp.open("GET", jsonFile);
+        xhttp.send();
+    },
+
+
+                            
+                            
+                        </code>
+                    </pre>
+                    <a class="link-to-notes" href="https://jadenmounteer.github.io/DateBot/" target="blank">Here is a link to DateBot if you want to see it for yourself!</a>
+                </section>
+            </main>
+        </div>
+
+    </body>
+</html>
