@@ -29,6 +29,10 @@ const tableOfContentsLinks = [
     {
         label: "Challenge 1: Todo App",
         url: "https://github.com/jadenmounteer/Todo-App"
+    },
+    {
+        label: "Week07",
+        url: "week7/index.html"
     }
 ]
 
