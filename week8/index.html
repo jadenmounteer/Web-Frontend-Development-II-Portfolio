@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to the CSS Stylesheet -->
+        <link rel="stylesheet" href="../styles.css" />
+        <!-- Link to the JavaScript file-->
+        <script src="../js/main.js" defer></script>
+        <title>Portfolio | Week 8</title>
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <!-- Name of site on the header -->
+                <h1 id="DeveloperDaddy-Title" class="logo">Week 8</h1>
+
+                <div id="developer-daddy-div">
+                    <a href="../index.html"><img src="../assets/DeveloperDaddy.gif" alt="an image of me" width="200"></a>
+                    <span id="message-span">Welcome to my week 8 stuff! This is where I learned more about... </span>
+                </div>
+
+                </script>
+
+                <script>
+                    /* Fetch the new message from the file using AJAX */
+                    function getNewMessage(textFile) {
+                        const xhttp = new XMLHttpRequest();
+
+                        xhttp.onload = function() {
+                            // Split the contents of the text file into an array
+                            let responseArray = this.responseText.split("\n");
+
+                            // Find a random number based on the array's length
+                            var randomNumber = Math.floor(Math.random() * responseArray.length);
+
+                            // Display the message based on the random number
+                            let messageToDisplay = responseArray[randomNumber];
+
+                            // Display the message to the screen
+                            document.getElementById("message-span").innerHTML = messageToDisplay
+                        };
+
+                        xhttp.open("GET", textFile);
+                        xhttp.send();
+
+                    }
+                    /* Set an interval that changes the message displayed every few seconds */
+                    setInterval(function(){
+                        // Call the AJAX function
+                        getNewMessage("../messages.txt");
+    
+                    }, 10000);
+
+                </script>
+            </header>
+
+            <main>
+
+                <!-- Notes/exercises Section -->
+                <section class="notes-and-exercises-section" id="notes-and-exercises-section">
+                    <h2 class="notes-and-exercises-header" id="notes-and-exercises-header">Notes and Exercises</h2>
+                    <p>My notes can be found here:</p> 
+                    <a class="link-to-notes" href="https://github.com/jadenmounteer/Web-Frontend-Development-II-Portfolio/tree/main/week8/notes%20and%20exercises">Week 8 notes</a>
+                    
+                </section>
+
+                <!-- Show and tell section -->
+                <section class="table-of-contents-section">
+                    <h2 class="table-of-contents-header">Using the Star Wars API</h2>
+                    <a class="link-to-notes" href="#" target="blank">An example of using promises to get data from an API</a>
+                </section>
+
+                
+                
+            </main>
+        </div>
+
+    </body>
+</html>
