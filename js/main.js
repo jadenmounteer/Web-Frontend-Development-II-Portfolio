@@ -37,6 +37,10 @@ const tableOfContentsLinks = [
     {
         label: "Week08",
         url: "week8/index.html"
+    },
+    {
+        label: "Week09",
+        url: "week9/index.html"
     }
 ]
 
