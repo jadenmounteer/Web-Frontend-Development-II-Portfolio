@@ -41,6 +41,10 @@ const tableOfContentsLinks = [
     {
         label: "Week09",
         url: "week9/index.html"
+    },
+    {
+        label: "Challenge 2: DateBot",
+        url: "https://github.com/jadenmounteer/DateBot "
     }
 ]
 
